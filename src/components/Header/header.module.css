@@ -1,0 +1,23 @@
+.container{
+    background-color: #ececec;
+    padding: 10px 40px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+.nav a{
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+.nav a:hover, .active{
+    color: blue !important;
+    text-decoration:underline !important;
+}
