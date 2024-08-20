@@ -4,13 +4,13 @@ import styles from "./blog.module.css";
 import clientPromise from "@/lib/mongodb";
 
 const Blog = async () => {
-  const client = await clientPromise;
-  const db = client.db();
-  const news = await db.collection("news").find({}).toArray();
+  // const client = await clientPromise;
+  // const db = client.db();
+  // const news = await db.collection("news").find({}).toArray();
 
   return (
     <div className={styles.container}>
-      {news.slice(0, 2).map((item) => (
+      {/* {news.slice(0, 2).map((item) => (
         <Card
           key={item.id}
           title={item.title}
@@ -19,7 +19,7 @@ const Blog = async () => {
           content={item.content}
           description={item.description}
         />
-      ))}
+      ))} */}
     </div>
   );
 };
