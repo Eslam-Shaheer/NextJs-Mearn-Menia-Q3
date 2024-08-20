@@ -1,7 +1,12 @@
 import React from "react";
+import SocialMedia from "./_components/SocialMedia";
 
 const Contact = () => {
-  return <h1>Contact</h1>;
+  return (
+    <div style={{ display: "flex", gap: 20 }}>
+      <SocialMedia />
+    </div>
+  );
 };
 
 export default Contact;

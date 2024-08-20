@@ -23,4 +23,16 @@ export const menuItems = [
     href: "/login",
     label: "Login",
   },
+  {
+    href: "/newsPage",
+    label: "News 1",
+  },
+  {
+    href: "/newsPage2",
+    label: "News 2",
+  },
+  {
+    href: "/mongoroute",
+    label: "Mongo DB",
+  },
 ];

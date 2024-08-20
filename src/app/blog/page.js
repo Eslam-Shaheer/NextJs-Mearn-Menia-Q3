@@ -1,20 +1,23 @@
 import React from "react";
 import Card from "./components/Card";
 import styles from "./blog.module.css";
+import clientPromise from "@/lib/mongodb";
 
 const Blog = async () => {
-  const postsJson = await fetch("https://jsonplaceholder.typicode.com/posts");
-  const posts = await postsJson.json();
-  // await new Promise((resolve) => setTimeout(resolve, 4000));
+  const client = await clientPromise;
+  const db = client.db();
+  const news = await db.collection("news").find({}).toArray();
 
   return (
     <div className={styles.container}>
-      {posts.map((item) => (
+      {news.slice(0, 2).map((item) => (
         <Card
           key={item.id}
           title={item.title}
-          body={item.body}
-          userId={item.userId}
+          image={item.image}
+          publishedAt={item.publishedAt}
+          content={item.content}
+          description={item.description}
         />
       ))}
     </div>
