@@ -8,6 +8,9 @@ const Blog = async () => {
   // const db = client.db();
   // const news = await db.collection("news").find({}).toArray();
 
+  // const newsJson = await fetch("http://localhost:3000/api/posts");
+  // const news = await newsJson.json();
+
   return (
     <div className={styles.container}>
       {/* {news.slice(0, 2).map((item) => (
