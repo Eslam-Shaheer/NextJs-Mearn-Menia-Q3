@@ -7,18 +7,18 @@ const Post = async ({ params }) => {
   //   notFound();
   // }
 
-  try {
-    const client = await clientPromise;
-    const db = client.db();
-    const news = await db.collection("news").find({ id: params.id }).toArray();
+  // try {
+  //   const client = await clientPromise;
+  //   const db = client.db();
+  //   const news = await db.collection("news").find({ id: params.id }).toArray();
 
-    if (!news.length) {
-      throw Error("not found");
-    }
-  } catch (error) {
-    notFound();
-    // redirect("/");
-  }
+  //   if (!news.length) {
+  //     throw Error("not found");
+  //   }
+  // } catch (error) {
+  //   notFound();
+  //   // redirect("/");
+  // }
 
   return <h1>Post {params.id}</h1>;
 };
