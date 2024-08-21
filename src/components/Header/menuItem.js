@@ -35,4 +35,12 @@ export const menuItems = [
     href: "/mongoroute",
     label: "Mongo DB",
   },
+  {
+    href: "/post/add",
+    label: "Add Post",
+  },
+  {
+    href: "/post",
+    label: "Posts",
+  },
 ];
